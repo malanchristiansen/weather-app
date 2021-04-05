@@ -62,3 +62,7 @@ li {
   position: relative;
   top: -32px;
 }
+
+p {
+  text-align: center;
+}
