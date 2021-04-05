@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>☔️ Wheather</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wheather-app">
+        <header class="cities">
+          <a href="#">Copenhagen</a> <a href="#">Sydney</a>
+          <a href="#">San Diego</a> <a href="#">Barcelona</a>
+        </header>
+        <h1 id="city"></h1>
+        <ul>
+          <li id="date-month-year"></li>
+          <li id="day-and-time"></li>
+          <li id="description"></li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="Mostly clody"
+                class="wheather-icon float-left"
+              />
+              <span class="temperature" id="temperature">19</span>
+              <span class="units">
+                <a href="#" id="celsius-link"> °C</a> |
+                <a href="#" id="fahrenheit-link">°F</a></span
+              >
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
+            </ul>
+            <div class="btn-group btn-group-sm" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary">Left</button>
+              <button type="button" class="btn btn-secondary">Middle</button>
+              <button type="button" class="btn btn-secondary">Right</button>
+            </div>
+          </div>
+        </div>
+        <form class="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Type a city..."
+                autofocus="on"
+                autocomplete="off"
+                class="form-control"
+                id="search-city-input"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary w-100"
+              />
+            </div>
+            <div class="col-3">
+              <button
+                class="form-control btn btn-success w-100"
+                id="my-location-button"
+              >
+                My location
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
